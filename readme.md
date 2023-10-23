@@ -1,4 +1,4 @@
-#Public toilet finder
+# Public toilet finder
 
 allow people to find public toilets easier and efficiently via a map. 
 
