@@ -3,16 +3,24 @@
 ## Business Case
 
 ### Problem statement
-TODO: Replace the example text like this with text that describes your project. What is the problem to be addressed?
+In the modern world, being able to access clean and easy to find public toilet can be a burden upon hikers and even local residents. Not being able to have these platforms to make public toilets easy to find can result in distress, difficulty and even health hazards.
 
 ### Business benefits
-TODO: List high-level benefits that this product will provide.
+1. Easy to find public toilets
+2. user engagement
+3. ability to access anywhere
 
 ### Options Considered
-TODO: What are some other customer options or leading products that address the same needs?
+1. Google maps
+2. Government websites
+3. Google search
 
 ### Expected Risks
-TODO: What are the main risks of this project?
+1. Data accuracy
+2. Data updates
+3. Competition
+4. technical problems
+
 
 ## Project Scope
 TODO: Scope of the System of Interest. Include a bullet list of things from your context diagram that are in scope.
