@@ -8,7 +8,8 @@ As a hiker I would want to find a public toilet on a map incase I get lost
 As a hiker I would want to see all the public toilets on a list so that I can plan my hike 
 
 ### Actors
-TODO: List and describe the actors/users for this product.
+Hiker - Long distance walker
+
 
 ### Use Cases
 TODO: Describe each use case (at least one per team member).
