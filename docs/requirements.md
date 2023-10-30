@@ -3,8 +3,9 @@
 ## User Needs
 
 ### User stories
-As a hiker i would want to find a public toilet on a map incase i get lost
-As a hiker i would want to see all the public toilets on a list so that i can plan my hike 
+As a hiker I would want to find a public toilet on a map incase I get lost
+
+As a hiker I would want to see all the public toilets on a list so that I can plan my hike 
 
 ### Actors
 TODO: List and describe the actors/users for this product.
