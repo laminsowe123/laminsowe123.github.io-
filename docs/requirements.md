@@ -41,7 +41,7 @@ TODO: Your Use-Case diagram should include all use-cases.
 ![Insert your Use-Case Diagram Here](images/UseCaseDiagram1.png)
 
 ## Software Requirements Specification
-### Functional requirements
+### Functional requirements 
 **FR1.1**    The system should get permission to access user location via geolocation object.
 **FR1.2**    The system should query the database for public toilets location from Open Data Bristol.
 **FR1.3**    The system should centre the map on the user location using the map object.
