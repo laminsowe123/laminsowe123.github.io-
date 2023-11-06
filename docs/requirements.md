@@ -16,16 +16,12 @@ TODO: Describe each use case (at least one per team member).
     Give each use case a unique ID, e.g. UC1, UC2, ...
     Summarise these using the use-case template below.
 
-| UC1| TODO: USE-CASE NAME | 
+| UC1| PUBLIC TOILET FINDER| 
 | -------------------------------------- | ------------------- |
 | **Description** | To be able to find nearest public toilet on a map |
 | **Actors** | TODO: Hikers|
 | **Assumptions** | </td>None</tr>
-| **Steps** |  1.Have the ability to see the public toilets on a map
-               2.Request access for the users location 
-               3.Get permission for geo location 
-               4.Get nearest public toilets from the database 
-               5.See the nearest public toilets on a map|
+| **Steps** |  <ol><li>Have the ability to see the public toilets on a map</li>CRequest access for the users location</li><li>Get permission for geo location</li><li>Get nearest public toilets from the database</li><li>See the nearest public toilets on a map</li><ol>|
 | **Variations** |  |
 | **Non-functional** | TODO: OPTIONAL - List of non-functional requirements that the use case must meet. |
 | **Issues** | |
