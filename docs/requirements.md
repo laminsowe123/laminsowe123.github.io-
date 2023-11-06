@@ -25,8 +25,7 @@ TODO: Describe each use case (at least one per team member).
                2.Request access for the users location 
                3.Get permission for geo location 
                4.Get nearest public toilets from the database 
-               5.See the nearest public toilets on a map 
-|
+               5.See the nearest public toilets on a map|
 | **Variations** |  |
 | **Non-functional** | TODO: OPTIONAL - List of non-functional requirements that the use case must meet. |
 | **Issues** | |
