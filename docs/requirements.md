@@ -16,15 +16,20 @@ TODO: Describe each use case (at least one per team member).
     Give each use case a unique ID, e.g. UC1, UC2, ...
     Summarise these using the use-case template below.
 
-| TODO: USE-CASE ID e.g. UC1, UC2, ... | TODO: USE-CASE NAME | 
+| UC1| TODO: USE-CASE NAME | 
 | -------------------------------------- | ------------------- |
-| **Description** | TODO: Goal to be achieved by use case and sources for requirement |
-| **Actors** | TODO: List of actors involved in use case |
-| **Assumptions** | TODO: Pre/post-conditions if any</td></tr>
-| **Steps** | TODO: Interactions between actors and system necessary to achieve goal |
-| **Variations** | TODO: OPTIONAL - Any variations in the steps of a use case |
+| **Description** | To be able to find nearest public toilet on a map |
+| **Actors** | TODO: Hikers|
+| **Assumptions** | </td>None</tr>
+| **Steps** |  1.Have the ability to see the public toilets on a map
+2.Request access for the users location 
+3.Get permission for geo location 
+4.Get nearest public toilets from the database 
+5.See the nearest public toilets on a map 
+|
+| **Variations** |  |
 | **Non-functional** | TODO: OPTIONAL - List of non-functional requirements that the use case must meet. |
-| **Issues** | TODO: OPTIONAL - List of issues that remain to be resolved |
+| **Issues** | |
 
 
 TODO: Your Use-Case diagram should include all use-cases.
