@@ -21,7 +21,7 @@ TODO: Describe each use case (at least one per team member).
 | **Description** | To be able to find nearest public toilet on a map |
 | **Actors** | TODO: Hikers|
 | **Assumptions** | </td>None</tr>
-| **Steps** |  <ol><li>Have the ability to see the public toilets on a map</li>CRequest access for the users location</li><li>Get permission for geo location</li><li>Get nearest public toilets from the database</li><li>See the nearest public toilets on a map</li><ol>|
+| **Steps** |  <ol><li>Have the ability to see the public toilets on a map</li><li>Request access for the users location</li><li>Get permission for geo location</li><li>Get nearest public toilets from the database</li><li>See the nearest public toilets on a map</li><ol>|
 | **Variations** |  |
 | **Non-functional** | TODO: OPTIONAL - List of non-functional requirements that the use case must meet. |
 | **Issues** | |
