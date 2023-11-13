@@ -48,6 +48,12 @@ Use Case 1-
 **FR1.3**    The system should centre the map on the user location using the map object.
 **FR1.4**   The system should add markers for public toilets using the map object.
 
+Use Case 2-
+**FR1.1**   The system should recieve an access entry to the user location via geolocation object.
+**FR1.2**   The system should query the database for list of public toilets via location from Open Data Bristol.
+**FR1.3**   The system should centre the list in the user location area with aid of a map object.
+**FR1.4**   The system should support the addition of markers for a public toilet list using the map object.
+
 
 ### Non-Functional Requirements
 Use Case 1-
@@ -60,4 +66,5 @@ Use Case 1-
 **NFR1.7**    No security requirments(security)</br>
 **NFR1.8**    straight forward updates on maps(maintainability)</br>
 
-
+Use Case 2- 
+**NFR1.1** 
