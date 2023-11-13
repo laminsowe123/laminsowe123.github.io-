@@ -48,7 +48,7 @@ Use Case 1-</br>
 **FR1.3**    The system should centre the map on the user location using the map object.</br>
 **FR1.4**   The system should add markers for public toilets using the map object.</br>
 
-Use Case 2-
+Use Case 2-</br>
 **FR1.1**   The system should recieve an access entry to the user location via geolocation object.</br>
 **FR1.2**   The system should query the database for list of public toilets via location from Open Data Bristol.</br>
 **FR1.3**   The system should centre the list in the user location area with aid of a map object.</br>
