@@ -61,10 +61,10 @@ Use Case 1-
 **NFR1.2**    The app should show the public toilet within 1 mile(usability)</br>
 **NFR1.3**    It mudt work without without user geolocation (reliability)</br>
 **NFR1.4**    should load the public toilets within 5 secs(performability)</br>
-**NFR1.5**    The app should work on chrome and safari browsers(compatibility)</br>
-**NFR1.6**    The data on the map should be up to date/no more than 1 year old(functional suitability)</br>
-**NFR1.7**    No security requirments(security)</br>
-**NFR1.8**    straight forward updates on maps(maintainability)</br>
+
 
 Use Case 2- 
-**NFR1.1** 
+**NFR1.1**    The app should work on chrome and safari browsers(compatibility)</br>
+**NFR1.2**    The data on the map should be up to date/no more than 1 year old(functional suitability)</br>
+**NFR1.3**    No security requirments(security)</br>
+**NFR1.4**    straight forward updates on maps(maintainability)</br>
