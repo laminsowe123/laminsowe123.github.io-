@@ -42,6 +42,7 @@ TODO: Your Use-Case diagram should include all use-cases.
 
 ## Software Requirements Specification
 ### Functional requirements 
+Use Case 1-
 **FR1.1**    The system should get permission to access user location via geolocation object.
 **FR1.2**    The system should query the database for public toilets location from Open Data Bristol.
 **FR1.3**    The system should centre the map on the user location using the map object.
@@ -49,7 +50,10 @@ TODO: Your Use-Case diagram should include all use-cases.
 
 
 ### Non-Functional Requirements
-TODO: Consider one or more [quality attributes](https://en.wikipedia.org/wiki/ISO/IEC_9126) to suggest a small number of non-functional requirements.
-Give each non-functional requirement a unique ID. e.g. NFR1, NFR2, ...
+Use Case 1-
+**NFR1.1**    The app should work on android devices(portability)
+**NFR1.2**    The app should show the public toilet within 1 mile(usability)
+**NFR1.3**    It mudt work without without user geolocation (reliability)
+**NFR1.4**   should load the public toilets within 5 secs(performability)
 
-Indicate which UC the requirement comes from.
+
