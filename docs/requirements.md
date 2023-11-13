@@ -42,28 +42,28 @@ TODO: Your Use-Case diagram should include all use-cases.
 
 ## Software Requirements Specification
 ### Functional requirements 
-Use Case 1-
-**FR1.1**    The system should get permission to access user location via geolocation object.
-**FR1.2**    The system should query the database for public toilets location from Open Data Bristol.
-**FR1.3**    The system should centre the map on the user location using the map object.
-**FR1.4**   The system should add markers for public toilets using the map object.
+Use Case 1-</br>
+**FR1.1**    The system should get permission to access user location via geolocation object.</br>
+**FR1.2**    The system should query the database for public toilets location from Open Data Bristol.</br>
+**FR1.3**    The system should centre the map on the user location using the map object.</br>
+**FR1.4**   The system should add markers for public toilets using the map object.</br>
 
 Use Case 2-
-**FR1.1**   The system should recieve an access entry to the user location via geolocation object.
-**FR1.2**   The system should query the database for list of public toilets via location from Open Data Bristol.
-**FR1.3**   The system should centre the list in the user location area with aid of a map object.
+**FR1.1**   The system should recieve an access entry to the user location via geolocation object.</br>
+**FR1.2**   The system should query the database for list of public toilets via location from Open Data Bristol.</br>
+**FR1.3**   The system should centre the list in the user location area with aid of a map object.</br>
 **FR1.4**   The system should support the addition of markers for a public toilet list using the map object.
 
 
 ### Non-Functional Requirements
-Use Case 1-
+Use Case 1-</br>
 **NFR1.1**    The app should work on android devices(portability)</br>
 **NFR1.2**    The app should show the public toilet within 1 mile(usability)</br>
 **NFR1.3**    It mudt work without without user geolocation (reliability)</br>
 **NFR1.4**    should load the public toilets within 5 secs(performability)</br>
 
 
-Use Case 2- 
+Use Case 2-</br>
 **NFR1.1**    The app should work on chrome and safari browsers(compatibility)</br>
 **NFR1.2**    The data on the list should be up to date/no more than 1 year old(functional suitability)</br>
 **NFR1.3**    No security requirments(security)</br>
