@@ -65,6 +65,6 @@ Use Case 1-
 
 Use Case 2- 
 **NFR1.1**    The app should work on chrome and safari browsers(compatibility)</br>
-**NFR1.2**    The data on the map should be up to date/no more than 1 year old(functional suitability)</br>
+**NFR1.2**    The data on the list should be up to date/no more than 1 year old(functional suitability)</br>
 **NFR1.3**    No security requirments(security)</br>
-**NFR1.4**    straight forward updates on maps(maintainability)</br>
+**NFR1.4**    straight forward updates on lists(maintainability)</br>
