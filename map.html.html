@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>Public Toilet Finder</title>
+    <!-- font links -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <!-- icon links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--w3 images-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+    <div class="grid-container">
+        <header>
+          <span class="heading"><a href="https://opendata.bristol.gov.uk/datasets/cca0ac9268bd4376a16fd391c2a274ca_21/explore">Public Toilet Finder</a></span>
+          <form class="search" action="index.html">
+            <input name="searchterm" placeholder="Search.." type="text" />
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </header>
+    <nav>
+       <button class="w3-button w3-blue w3-block w3-border-white"> Find nearest toilet</button> 
+       <button onclick="location.href='index.html.html'" class="w3-button w3-blue w3-block w3-border-white"> Find toiley by type</button> 
+    </nav>
+    <main>
+        <iframe id="table" src="https://arcg.is/1498Xq0" ></iframe>
+    </main>
+  </div>
+</body>
+
+</html>
