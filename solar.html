@@ -24,27 +24,61 @@
       const MY_TOKEN = "pk.eyJ1IjoibGFtaW5zb3dlIiwiYSI6ImNsc3QwZWswazB4ZHcya3FpMHlsMTRwcm0ifQ.Q_j87Q5QrGUbORgT5s3Bqw";
 
         
-       function addmarkers(json){
-        console.log(json)
-        let features = json.features;
-        for (i=0; i<features.length; i++) {
-         tr = document.createElement('tr')
-         let a = features[i].attributes;
-         let g = features [i].geometry;
-         var marker = new mapboxg1.Marker().setLngLat(g.x, g.y).addTo(map);
-       //create the popup
-       let popup = new mapbox1.Popup({ offset: 25 }).setHTML(`<a href="index.html?id=${a.OBJECTID}">${a.Name}</a>`);
-       marker.setPopup(popup);
-      
-        }
-        }
+    function addPolygons(json) {
+    console.log(json);
+    let features = json.features;
+    for (let i = 0; i < features.length; i++) {
+        let tr = document.createElement('tr');
+        let p = features[i].properties;
+        let g = features[i].geometry;
         
+    }
+}
+        
+         // Add GeoJSON data source.
+         map.addSource(p.WARDID, { 
+            type: 'geojson', 
+            data: features[i]
+          });
+
+          // Add polygon fill
+          map.addLayer({
+            'id': "fill-"+p.WARDID,
+            'type': 'fill',
+            'source': p.WARDID, // reference the data source
+            'layout': {},
+            // blue fill, 50% opacity
+            'paint': { 'fill-color': '#0080ff', 'fill-opacity': 0.5 }
+          });
+      
+          // Add polygon outline
+         map.addLayer({
+            'id': "line-"+p.WARDID,
+            'type': 'line',
+            'source': "data-"+p.WARDID,
+            'layout': {},
+            'paint': { 'line-color': '#000', 'line-width': 1 }
+          });
+        
+        // onclick popup
+        map.on('click', "fill-"+p.WARDID, function(event) {
+            // Select the feature
+            var feature = event.features[0];
+
+            // Add popup
+        let popup = new mapboxgl.Popup()
+              .setLngLat(event.lngLat)
+              .setText(feature.properties.WARDNAME)
+              .addTo(map);
+          });
+
         function query() {
-            let url = 'https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_community_and_safety/MapServer/21/query?where=1%3D1&outFields=TOILET_NAME,ADDRESS,MALE,FEMALE&outSR=4326&f=json'
-            fetch(url,{method: "GET", headers: {Accept: "application/json"}})
-            .then(res=>res.json())
-            .then(outputTable)
-        }
+        let url=('https://services2.arcgis.com/a4vR8lmmksFixzmB/arcgis/rest/services/Solar_Potential_WARD/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson')
+        fetch(url, { method: 'GET', headers: { 'Accept': 'application/json' }})
+        .then(res => res.json())
+        .then(data => addPolygons(data));
+}
+        
     </script>
 </head>
 
@@ -70,6 +104,11 @@
      var urlParams = new URLSearchParams(location.search);
      var lat = urlParams.get('lat');
      var lon = urlParams.get('lon');
+
+     var lat=51.4994;
+     var Ion=2.534;
+
+
     
      mapboxgl.accessToken = MY_TOKEN;
     var map = new mapboxgl.Map({

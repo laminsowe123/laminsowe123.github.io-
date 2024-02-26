@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <title>Public Toilet Finder</title>
+    <!-- font links -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <!-- icon links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--w3 images-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="script.js"> </script>
+    <script>
+
+        
+       function outputTable(json){
+        console.log(json)
+        var t = document.getElementById("results");
+        let features = json.features;
+        for (i=0; i<features.length; i++) {
+            var row = document.createElement("tr")
+            t.appendChild(row)
+            var a = features[i].attributes;
+            var name = document.createElement("td");
+            var address = document.createElement("td")
+            var male = document.createElement("td")
+            var female = document.createElement("td")
+            name.innerHTML = a.TOILET_NAME;
+            address.innerHTML = a.ADDRESS;
+            male.innerHTML = a.MALE;
+            female.innerHTML = a.FEMALE;
+            row.appendChild(name)
+            row.appendChild(address)
+            row.appendChild(male)
+            row.appendChild(female)
+        }
+        }
+        
+        function query() {
+            let url = 'https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_community_and_safety/MapServer/21/query?where=1%3D1&outFields=TOILET_NAME,ADDRESS,MALE,FEMALE&outSR=4326&f=json'
+            fetch(url,{method: "GET", headers: {Accept: "application/json"}})
+            .then(res=>res.json())
+            .then(outputTable)
+        }
+    </script>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header>
+          <span class="heading"><a href="https://opendata.bristol.gov.uk/datasets/cca0ac9268bd4376a16fd391c2a274ca_21/explore">Public Toilet Finder</a></span>
+          <form class="search" action="search.html">
+            <input name="searchterm" placeholder="Search.." type="text" />
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+    </header>
+    <nav>
+       <button onclick="getLocation('map.html.html')" class="w3-button w3-blue w3-block w3-border-white"> Find nearest toilet</button> 
+       <button onclick="location.href='type.html.html'" class="w3-button w3-blue w3-block w3-border-white"> Find toilet by type</button> 
+    </nav>
+    <main>
+        <!--iframe id="table" src="https://arcg.is/1GbWn1" ></iframe!-->
+        <table>
+            <thead><th>Name</th><th>Address</th><th>Male</th><th>Female</th></thead>
+            <tbody id="results"></tbody>
+        </table>
+    </main>
+  </div>
+  <script>query()</script>
+</body>
+
+</html>
