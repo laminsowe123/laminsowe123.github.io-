@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <title>Public Toilet Finder</title>
+    <!-- font links -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <!-- icon links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--w3 images-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="script.js"> </script>
+    <script language="javascript" src="https://www.nearby.org.uk/tests/geotools2.js"></script>
+    <script>
+
+        
+function outputTable(json) {
+        let element = document.getElementById("results");
+        let features = json.features;
+        for (i=0; i<features.length; i++) {
+          tr = document.createElement('tr');
+          let a = features[i].attributes;
+          let g = features[i].geometry;
+          let td = document.createElement('td');
+          td.innerHTML = a.TOILET_NAME;
+          tr.appendChild(td);
+
+          td = document.createElement('td');
+          td.innerHTML = a.ADDRESS;
+          tr.appendChild(td);
+          element.appendChild(tr);
+
+          td = document.createElement('td');
+          td.innerHTML = a.MALE;
+          tr.appendChild(td);
+          element.appendChild(tr);
+
+          td = document.createElement('td');
+          td.innerHTML = a.FEMALE;
+          tr.appendChild(td);
+          element.appendChild(tr);
+
+          td = document.createElement('td');
+          let d = Math.round(Math.sqrt((g.x - osgb.eastings) ** 2 
+                                     + (g.y - osgb.northings)** 2));
+          td.innerHTML = `${d} metres`  ;
+          tr.appendChild(td);
+          element.appendChild(tr);
+        }
+        }
+        
+        function query(eastings, northings) {
+            let url = `https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_community_and_safety/MapServer/21/query?where=1%3D1&text=&objectIds=&time=&timeRelation=esriTimeRelationOverlaps&geometry=${eastings}%2C+${northings}&geometryType=esriGeometryPoint&inSR=&spatialRel=esriSpatialRelIntersects&distance=3&units=esriSRUnit_Kilometer&relationParam=&outFields=*&returnGeometry=true&returnTrueCurves=false&maxAllowableOffset=&geometryPrecision=&outSR=&havingClause=&returnIdsOnly=false&returnCountOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&gdbVersion=&historicMoment=&returnDistinctValues=false&resultOffset=&resultRecordCount=&returnExtentOnly=false&sqlFormat=none&datumTransformation=&parameterValues=&rangeValues=&quantizationParameters=&featureEncoding=esriDefault&f=pjson`;
+            fetch(url,{method: "GET", headers: {Accept: "application/json"}})
+            .then(res=>res.json())
+            .then(outputTable)
+        }
+    </script>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header>
+          <span class="heading"><a href="https://opendata.bristol.gov.uk/datasets/cca0ac9268bd4376a16fd391c2a274ca_21/explore">Public Toilet Finder</a></span>
+          <form class="search" action="search.html">
+            <input name="searchterm" placeholder="Search.." type="text" />
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+    </header>
+    <nav>
+       <button onclick="getLocation('map.html.html')" class="w3-button w3-blue w3-block w3-border-white"> Find nearest toilet</button> 
+       <button onclick="location.href='type.html.html'" class="w3-button w3-blue w3-block w3-border-white"> Find toilet by type</button> 
+    </nav>
+    <main>
+        <!--iframe id="table" src="https://arcg.is/1GbWn1" ></iframe!-->
+        <table>
+            <thead><th>Name</th><th>Address</th><th>Male</th><th>Female</th><th>Distance</th></thead>
+            <tbody id="results"></tbody>
+        </table>
+    </main>
+  </div>
+  <script>
+     // get query string parameters lat, lon
+     var urlParams = new URLSearchParams(location.search);
+     var lat = urlParams.get('lat');
+     var lon = urlParams.get('lon');
+    
+     var wgs84 = new GT_WGS84();
+     wgs84.setDegrees(lat, lon);
+     var osgb = wgs84.getOSGB();
+     query(osgb.eastings,osgb.northings);
+    </script>
+</body>
+
+</html>
