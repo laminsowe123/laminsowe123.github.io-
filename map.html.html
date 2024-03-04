@@ -7,7 +7,7 @@
     <link href="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.js"></script>
     <style>
-      #map { position: absolute; top: 1; height: 60%; width: 60%; }
+      #map { position: absolute; top: 150; height: 60%; width: 60%; }
     </style>
    
     <!-- font links -->
@@ -24,18 +24,16 @@
       const MY_TOKEN = "pk.eyJ1IjoibGFtaW5zb3dlIiwiYSI6ImNsc3QwZWswazB4ZHcya3FpMHlsMTRwcm0ifQ.Q_j87Q5QrGUbORgT5s3Bqw";
 
         
-       function addmarkers(json){
-        console.log(json)
+       function addMarkers(json) {
         let features = json.features;
         for (i=0; i<features.length; i++) {
-         tr = document.createElement('tr')
-         let a = features[i].attributes;
-         let g = features [i].geometry;
-         var marker = new mapboxg1.Marker().setLngLat(g.x, g.y).addTo(map);
-       //create the popup
-       let popup = new mapbox1.Popup({ offset: 25 }).setHTML(`<a href="index.html?id=${a.OBJECTID}">${a.Name}</a>`);
-       marker.setPopup(popup);
-      
+            let a = features[i].attributes;
+            let g = features[i].geometry;
+            let marker = new mapboxgl.Marker().setLngLat([g.x, g.y]).addTo(map);
+            // create the popup
+            let popup = new mapboxgl.Popup({ offset: 25 }).setHTML(`<a href="index.html.html?id=${a.OBJECTID}">${a.TOILET_NAME}</a>`);
+            marker.setPopup(popup);
+
         }
         }
         
@@ -43,7 +41,7 @@
             let url = 'https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_community_and_safety/MapServer/21/query?where=1%3D1&outFields=TOILET_NAME,ADDRESS,MALE,FEMALE&outSR=4326&f=json'
             fetch(url,{method: "GET", headers: {Accept: "application/json"}})
             .then(res=>res.json())
-            .then(outputTable)
+            .then(addMarkers);
         }
     </script>
 </head>
@@ -79,11 +77,10 @@
             }); 
 
      // Create marker and add it to the map.
-     map.on('load',() => {
-     var marker = new mapboxgl.Marker().setLngLat([lon, lat]).addTo(map);
-   query()
-    }); 
-     </script>
+     map.on('load', () => {
+       query();
+     });
+  </script>
 </body>
 
 </html>
