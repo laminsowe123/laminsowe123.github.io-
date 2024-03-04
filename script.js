@@ -1,32 +1,18 @@
-async function getLocation(page) {
-  let locationParams = {};
-
+function getLocation(page) {
   if (navigator.geolocation) {
-    try {
-      const position = await new Promise((resolve, reject) => {
-        navigator.geolocation.getCurrentPosition(resolve, reject);
-      });
-
-      locationParams = {
-        lat: position.coords.latitude,
-        lon: position.coords.longitude
-      };
-    } catch (error) {
-      console.error('Geolocation permission denied:', error);
-      // location defaults to central Bristol
-      locationParams = {
-        lat: 51.454514,
-        lon: -2.587910
-      };
-    }
-  } else {
-    console.error('Geolocation is not supported by this browser.');
-    // location defaults to central Bristol
-    locationParams = {
-      lat: 51.454514,
-      lon: -2.587910
-    };
+      navigator.geolocation.getCurrentPosition(
+        function(loc) { // permission granted
+          location.href=`${page}?lat=${loc.coords.latitude}&lon=${loc.coords.longitude}`;
+        },
+        function() { // permission denied
+          // location defaults to central Bristol
+          location.href=`${page}?lat=51.454514&lon=-2.587910`;              
+        }
+      )
   }
-
-  location.href = `${page}?${new URLSearchParams(locationParams).toString()}`;
+  else { // unsupported feature
+      alert("Geolocation is not supported by this browser.");
+      // location defaults to central Bristol
+      location.href=`${page}?lat=51.454514&lon=-2.587910`;
+  }
 }
