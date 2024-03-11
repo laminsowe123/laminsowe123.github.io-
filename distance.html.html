@@ -55,7 +55,7 @@ function outputTable(json) {
             let url = `https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_community_and_safety/MapServer/21/query?where=1%3D1&text=&objectIds=&time=&timeRelation=esriTimeRelationOverlaps&geometry=${eastings}%2C+${northings}&geometryType=esriGeometryPoint&inSR=&spatialRel=esriSpatialRelIntersects&distance=3&units=esriSRUnit_Kilometer&relationParam=&outFields=*&returnGeometry=true&returnTrueCurves=false&maxAllowableOffset=&geometryPrecision=&outSR=&havingClause=&returnIdsOnly=false&returnCountOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&gdbVersion=&historicMoment=&returnDistinctValues=false&resultOffset=&resultRecordCount=&returnExtentOnly=false&sqlFormat=none&datumTransformation=&parameterValues=&rangeValues=&quantizationParameters=&featureEncoding=esriDefault&f=pjson`;
             fetch(url,{method: "GET", headers: {Accept: "application/json"}})
             .then(res=>res.json())
-            .then(outputTable)
+            .then(outputTable);
         }
     </script>
 </head>
@@ -63,15 +63,15 @@ function outputTable(json) {
 <body>
     <div class="grid-container">
         <header>
-          <span class="heading"><a href="https://opendata.bristol.gov.uk/datasets/cca0ac9268bd4376a16fd391c2a274ca_21/explore">Public Toilet Finder</a></span>
+          <span class="heading"><a href="index.html.html">Public Toilet Finder</a></span>
           <form class="search" action="search.html">
             <input name="searchterm" placeholder="Search.." type="text" />
             <button type="submit"><i class="fa fa-search"></i></button>
           </form>
     </header>
     <nav>
-       <button onclick="getLocation('map.html.html')" class="w3-button w3-blue w3-block w3-border-white"> Find nearest toilet</button> 
-       <button onclick="location.href='type.html.html'" class="w3-button w3-blue w3-block w3-border-white"> Find toilet by type</button> 
+       <button onclick="getLocation('map.html.html')" class="w3-button w3-black w3-block w3-border-white"> Find nearest toilet</button> 
+       <button onclick="location.href='type.html'" class="w3-button w3-black w3-block w3-border-white"> Find toilet by type</button> 
     </nav>
     <main>
         <!--iframe id="table" src="https://arcg.is/1GbWn1" ></iframe!-->
@@ -79,7 +79,7 @@ function outputTable(json) {
             <thead><th>Name</th><th>Address</th><th>Male</th><th>Female</th><th>Distance</th></thead>
             <tbody id="results"></tbody>
         </table>
-    </main>
+    
   </div>
   <script>
      // get query string parameters lat, lon
@@ -92,6 +92,7 @@ function outputTable(json) {
      var osgb = wgs84.getOSGB();
      query(osgb.eastings,osgb.northings);
     </script>
+     </main>
 </body>
 
 </html>
