@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #ffd700;
+  --primary-color: #a7a7a7;
   --grid-item-hover-bg: rgba(var(--primary-color), 0.1);
 }
 
