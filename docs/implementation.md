@@ -8,7 +8,6 @@ The main app is directed in the app folder and index.html.html is the splash pag
 
 ```
 ├── app
-├── laminsowe123.github.io-
 │   ├── distance.html.html
 │   ├── index.html.html
 │   └── map.html.html
