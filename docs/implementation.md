@@ -53,12 +53,11 @@ Error
 ```
 
 ## Software Architecture
-TODO: Describe the major components of your architecture. Are any particular architectural styles being used?
+The main app uses data from Bristol Open Data, and uses maps supplied by Mapbox. This is a service-orientated architecture.
 
 ![Insert your component Diagram here](images/componentdiagram.png)
 
 ## Bristol Open Data API
-TODO: Document each query to Bristol Open Data
 
 ![UML Class diagrams representing JSON query results](images/classdiagram.png)
-TODO: Repeat as necessary
+
