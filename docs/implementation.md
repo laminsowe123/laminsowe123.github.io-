@@ -55,7 +55,7 @@ Error
 ## Software Architecture
 TODO: Describe the major components of your architecture. Are any particular architectural styles being used?
 
-![Insert your component Diagram here](images/component.png)
+![Insert your component Diagram here](images/componentdiagram.png)
 
 ## Bristol Open Data API
 TODO: Document each query to Bristol Open Data
