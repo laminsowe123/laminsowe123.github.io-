@@ -3,8 +3,7 @@
 ## Test Plan
 | Test case ID | Test type |	Description                                 |	Scenario |
 | -------------| ----------| -------------------------------------------  | ---------|
-|TF1.1	       |UAT        | 	Requests permission to access user location | 1. User clicks "Find nearest toilet" 
-                                                                            2. Confirmation box appears, requesting permission.
+|TF1.1	       |UAT        | 	Requests permission to access user location | 1. User clicks "Find nearest toilet" 2. Confirmation box appears, requesting permission.
           
 
 
