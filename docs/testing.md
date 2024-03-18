@@ -1,7 +1,12 @@
 # Testing
 
 ## Test Plan
-TODO: Describe any manual and automated (unit) tests. Uniquely identify each test case. Include prerequisites and test data.
+| Test case ID | Test type |	Description                                 |	Scenario |
+| -------------| ----------| -------------------------------------------  | ---------|
+|TF1.1	       |UAT        | 	Requests permission to access user location | 1. User clicks "Find nearest toilet" 
+                                                                          | 2. Confirmation box appears, requesting permission.
+          
+
 
 Test Runs
 TODO: For each test described above, indicate the current status. 
