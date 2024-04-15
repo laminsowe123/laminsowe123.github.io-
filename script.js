@@ -1,32 +1,49 @@
-async function getLocation(page) {
-  let locationParams = {};
+const MY_TOKEN = "pk.eyJ1IjoibGFtaW5zb3dlIiwiYSI6ImNsc3QwZWswazB4ZHcya3FpMHlsMTRwcm0ifQ.Q_j87Q5QrGUbORgT5s3Bqw"
 
-  if (navigator.geolocation) {
-    try {
-      const position = await new Promise((resolve, reject) => {
-        navigator.geolocation.getCurrentPosition(resolve, reject);
-      });
+function outputTable(json) {
+  let element = document.getElementById("results");
+  element.innerHTML = "";
+  let features = json.features;
+  for (i=0; i<features.length; i++) {
+    let tr = document.createElement('tr');
+    let a = features[i].attributes;
+    let td = document.createElement('td');
+    td.innerHTML = a.TOILET_NAME;
+    tr.appendChild(td);
 
-      locationParams = {
-        lat: position.coords.latitude,
-        lon: position.coords.longitude
-      };
-    } catch (error) {
-      console.error('Geolocation permission denied:', error);
-      // location defaults to central Bristol
-      locationParams = {
-        lat: 51.454514,
-        lon: -2.587910
-      };
-    }
-  } else {
-    console.error('Geolocation is not supported by this browser.');
-    // location defaults to central Bristol
-    locationParams = {
-      lat: 51.454514,
-      lon: -2.587910
-    };
+    td = document.createElement('td');
+    td.innerHTML = a.ADDRESS;
+    tr.appendChild(td); 
+
+    td = document.createElement('td');
+    td.innerHTML = a.MALE;
+    tr.appendChild(td);  
+
+    td = document.createElement('td');
+    td.innerHTML = a.FEMALE;
+    tr.appendChild(td);
+
+    element.appendChild(tr);
   }
+}
+  
 
-  location.href = `${page}?${new URLSearchParams(locationParams).toString()}`;
+// Request user geolocation and callback with lat, lon
+function getLocation(page,win = window, nav = navigator) {
+  if (nav.geolocation) {
+      nav.geolocation.getCurrentPosition(
+        function(loc) { // permission granted
+          win.location.href=`${page}?lat=${loc.coords.latitude}&lon=${loc.coords.longitude}`;
+        },
+        function() { // permission denied
+          // location defaults to central Bristol
+          win.location.href=`${page}?lat=51.454514&lon=-2.587910`;              
+        }
+      )
+  }
+  else { // unsupported feature
+      win.alert("Geolocation is not supported by this browser.");
+      // location defaults to central Bristol
+      win.location.href=`${page}?lat=51.454514&lon=-2.587910`;
+  }
 }
