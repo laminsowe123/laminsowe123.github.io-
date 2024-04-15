@@ -59,7 +59,7 @@ Use Case 2-</br>
 Use Case 1-</br>
 **NFR1.1**    The app should work on android devices(portability)</br>
 **NFR1.2**    The app should show the public toilet within 1 mile(usability)</br>
-**NFR1.3**    It mudt work without without user geolocation (reliability)</br>
+**NFR1.3**    If denied acces to user location, centre to Bristol City Cntre (reliability)</br>
 **NFR1.4**    should load the public toilets within 5 secs(performability)</br>
 
 
