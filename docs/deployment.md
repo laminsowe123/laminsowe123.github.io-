@@ -10,5 +10,5 @@ Describe the deployment of software components to hardware nodes using a UML Dep
 # User guide
 TODO: Explain how each use-case works by providing step-by-step screenshots for each use-case. This should be based on a tested scenario.
 
-![Insert screenshots here](images/screenshot.png)
+![Insert screenshots here](images/list.png)
 TODO: Repeat as necessary
