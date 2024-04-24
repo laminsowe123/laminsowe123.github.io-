@@ -8,7 +8,7 @@ Describe the deployment of software components to hardware nodes using a UML Dep
 ![Insert Deployment diagram here](images/deployment.png)
 
 # User guide
-TODO: Explain how each use-case works by providing step-by-step screenshots for each use-case. This should be based on a tested scenario.
+This Use Case is used to find the public toilet by a list. In the photo below, it shows the different names of the public toilets, the address and also shows if there is availability for male or female users. this will be beneficial for the user as they can plan their journey according to the availability of the public toilet. 
 
 ![Insert screenshots here](images/list.png)
 TODO: Repeat as necessary
