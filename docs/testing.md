@@ -32,4 +32,13 @@
 
 
 
+Legend
 
+UC: Use Case
+FR: Functional Requirement
+NFR: Non-Functional Requirement
+UAT: User Acceptance Testing
+PASS: Test passed
+ALL: All software modules
+
+Note: The Requirements Testability Matrix is a table that maps each requirement to its corresponding test case, software module, and test status. This matrix helps to ensure that each requirement is covered by at least one test case and that all test cases are executed successfully.
