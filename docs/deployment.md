@@ -1,11 +1,12 @@
 # Deployment
 
 ## Release Notes
-TODO: Describe the current version of the system (with version number. Include system dependencies ands software tools used.
-Are there any known issues? 
-Describe the deployment of software components to hardware nodes using a UML Deployment diagram.
+Public Toilet finder, version 1.0. For this website, we used a range of system dependencies. For the map service, we used Mapbox for free and precise mapping . We used HTML, CSS and JavaScript on Visual studio code for the frontend work. Bristol Open data played a huge part in providing us with the data set and public toilet locations  to incorporate into our website.
 
-![Insert Deployment diagram here](images/deployment.png)
+
+
+![Insert Deployment diagram here<img width="431" alt="image" src="https://github.com/laminsowe123/laminsowe123.github.io-/assets/148768839/9f77af2d-1f80-4fcc-b230-77cc8747de01">
+]
 
 # User guide
 This Use Case is used to find the public toilet by a list. In the photo below, it shows the different names of the public toilets, the address and also shows if there is availability for male or female users. this will be beneficial for the user as they can plan their journey according to the availability of the public toilet. 
