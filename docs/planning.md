@@ -27,9 +27,9 @@ In the modern world, being able to access clean and easy to find public toilet c
 ## Project Scope
 The scope of the system of interest includes the following components:
 
-User interface for searching and displaying public toilets
-Integration with mapping services to display toilet locations
-Database of public toilet locations and attributes
-Data update mechanism to ensure data accuracy and freshness
+1. User interface for searching and displaying public toilets.
+2. Integration with mapping services to display toilet locations.
+3. Database of public toilet locations and attributes.
+4. Data update mechanism to ensure data accuracy and freshness.
 
 ![Insert your Context Diagram Here](images/condi.png.jpg)
