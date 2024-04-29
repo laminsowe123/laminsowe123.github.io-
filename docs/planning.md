@@ -32,4 +32,44 @@ The scope of the system of interest includes the following components:
 3. Database of public toilet locations and attributes.
 4. Data update mechanism to ensure data accuracy and freshness.
 
+                                      +---------------+
+                                      |  User        |
+                                      +---------------+
+                                             |
+                                             |
+                                             v
+                                      +---------------+
+                                      |  User Interface  |
+                                      +---------------+
+                                             |
+                                             |
+                                             v
+                                      +---------------+
+                                      |  Mapping Service  |
+                                      +---------------+
+                                             |
+                                             |
+                                             v
+                                      +---------------+
+                                      |  Database        |
+                                      +---------------+
+                                             |
+                                             |
+                                             v
+                                      +---------------+
+                                      |  Data Update     |
+                                      +---------------+
+                                             |
+                                             |
+                                             v
+                                      +---------------+
+                                      |  Government APIs  |
+                                      +---------------+
+                                             |
+                                             |
+                                             v
+                                      +---------------+
+                                      |  Open Data Sources|
+                                      +---------------+
+
 ![Insert your Context Diagram Here](images/condi.png.jpg)
