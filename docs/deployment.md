@@ -5,7 +5,7 @@ Public Toilet finder, version 1.0. For this website, we used a range of system d
 
 
 
-![Insert Deployment diagram here<img width="431" alt="image" src="https://github.com/laminsowe123/laminsowe123.github.io-/assets/148768839/9f77af2d-1f80-4fcc-b230-77cc8747de01">
+<img width="431" alt="image" src="https://github.com/laminsowe123/laminsowe123.github.io-/assets/148768839/9f77af2d-1f80-4fcc-b230-77cc8747de01">
 ]
 
 # User guide
