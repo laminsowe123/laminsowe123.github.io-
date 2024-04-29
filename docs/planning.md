@@ -25,6 +25,11 @@ In the modern world, being able to access clean and easy to find public toilet c
 
 
 ## Project Scope
-TODO: Scope of the System of Interest. Include a bullet list of things from your context diagram that are in scope.
+The scope of the system of interest includes the following components:
+
+User interface for searching and displaying public toilets
+Integration with mapping services to display toilet locations
+Database of public toilet locations and attributes
+Data update mechanism to ensure data accuracy and freshness
 
 ![Insert your Context Diagram Here](images/condi.png.jpg)
