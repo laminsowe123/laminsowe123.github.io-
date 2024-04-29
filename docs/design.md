@@ -1,10 +1,8 @@
 # Design
 
 ## User Interface design
-TODO: Specify and develop a user interface mockup using a wireframe.
 
 ![Insert your wireframe/wireflow here](images/PublicToilet.png)
-TODO: repeat as necessary
 
 The user interface design is a crucial aspect of the public toilet finder system, as it directly impacts the user experience and usability of the platform. The following is a proposed design for the user interface:
 
