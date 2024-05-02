@@ -6,6 +6,8 @@
 In the modern world, being able to access clean and easy to find public toilet can be a burden upon hikers and even local residents. Not being able to have these platforms to make public toilets easy to find can result in distress, difficulty and even health hazards.
 
 ### Business benefits
+We intend to bring a range of benefits that would lead to the success of our project. These are some of the benefits that our business can bring 
+
 1. Easy to find public toilets - The project can draw and keep people by providing an easy-to-use method for finding nearby public restrooms.
 
 2. user engagement- Increasing platform usage and user loyalty through improved user engagement can lead to  growth and the attraction of new customers.
@@ -13,11 +15,15 @@ In the modern world, being able to access clean and easy to find public toilet c
 3. ability to access anywhere- Universal accessibility broadens the user base, increasing the platform's reach and potential and growth.
 
 ### Options Considered
+there are different options that the public could use to find public toilets. These are some of the other options that we need to consider,
+
 1. Google maps-  Google Maps frequently offer details on public restrooms in the area.  
 2. Government websites- Public restroom locations are listed in databases kept by numerous local and federal governments. 
 3. Google search- Google search frequently provide information about public restrooms in the area.
 
 ### Expected Risks
+There are some risks that we need to take into consideration before starting our project to ensure the best user experience,
+
 1. Data accuracy- ensuring that the data regarding the locations of public restrooms is accurate.
 2. Data updates- ensuring that the data regarding the locations of public restrooms is up to date
 3. Competition- There are already specialised apps and well-established competitors in the market for restroom-finding services, so it could be competitive.
